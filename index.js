@@ -6,18 +6,9 @@ const sumOfOdd = (arr) => arr.reduce((sum, current) => current%2 !== 0 ? sum+cur
 console.log(sumOfOdd(arr));
 
 /* (b)Sum of all nums at odd indices */
-// const sumOfOddIdxNums = (arr) => arr.reduce((sum, current, index) => index%2 !== 0 ? sum+current : sum)
+const sumOfOddIdxNums = (arr) => arr.reduce((sum, current, index) => (index%2 !== 0 ? sum+current : sum), 0 )
 
-// console.log(sumOfOddIdxNums(arr))
-
-const sumOfOddIdxNums2 = (arr) => {
-  let sum = 0;
-  for(let i=1;i<arr.length;i+=2){
-    sum += arr[i];
-  }
-  return sum;
-}
-console.log(sumOfOddIdxNums2(arr))
+console.log(sumOfOddIdxNums(arr))
 
 /* (C)Biggest num in array */
 const biggestInArr = (arr) => {
